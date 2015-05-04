@@ -13,11 +13,9 @@ body {
 }
 
 table-of-contents {
-  font-size: 0.9em;
   background: #f0f0f0;
   padding: 1em 2em;
   margin-bottom: 5em;
-  /*float: right;*/
 }
 
 table-of-contents a {
@@ -27,8 +25,10 @@ table-of-contents a {
 
 <h1>&lt;table-of-contents&gt; demo</h1>
 
-<h3>Table of contents</h3>
-<table-of-contents select="h2, h3"></table-of-contents>
+<section class="toc">
+  <h3>Table of contents</h3>
+  <table-of-contents select="h2, h3"></table-of-contents>
+</section>
 
 <section>
   <h2>First section</h2>
