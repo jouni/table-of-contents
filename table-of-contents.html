@@ -27,7 +27,7 @@ TableOfContents = Polymer({
 
   idCount: 0,
 
-  ready: function() {
+  attached: function() {
     if(this.select) {
       this.level(this.select.split(","), 0, document, null);
     }
@@ -52,6 +52,16 @@ TableOfContents = Polymer({
   addLink: function(el, level, tocContext) {
     var a = document.createElement("a");
     var hash = this._createHash(el);
+
+    // Check if the hash is used and scroll to that element
+    if(document.location.hash == "#" + hash && el.scrollIntoView) {
+      // Delay to allow other custom elements to render
+      // TODO hacky, would need a way to listen for an event when the content size has settled
+      setTimeout(function() {
+        el.scrollIntoView();
+      }, 1500);
+    }
+
     el.id = hash;
     a.href = "#" + hash;
     a.className = "level-" + level;

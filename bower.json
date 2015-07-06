@@ -1,6 +1,6 @@
 {
   "name": "table-of-contents",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "homepage": "https://github.com/jounik/table-of-contents",
   "authors": [
     "Jouni Koivuviita <jouni@jouni.me>"
@@ -22,6 +22,6 @@
     "tests"
   ],
   "dependencies": {
-    "polymer": "Polymer/polymer#v0.8.0-rc.7"
+    "polymer": "Polymer/polymer#~v1.0.5"
   }
 }
